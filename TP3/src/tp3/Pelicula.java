@@ -3,7 +3,7 @@ package tp3;
 public class Pelicula extends Produto{
 	
 	private String material;
-	private Double espessura;
+	private double espessura;
 	private String celularCompativel;
 	
 	//Getters e Setters
@@ -16,11 +16,11 @@ public class Pelicula extends Produto{
 		this.material = material;
 	}
 	
-	public Double getEspessura() {
+	public double getEspessura() {
 		return espessura;
 	}
 	
-	public void setEspessura(Double espessura) {
+	public void setEspessura(double espessura) {
 		this.espessura = espessura;
 	}
 	

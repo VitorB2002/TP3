@@ -4,7 +4,7 @@ public class Capa extends Produto {
 	
 	private String material;
 	private String celularCompativel;
-	private Double peso;
+	private double peso;
 	private String cor;
 	
 	//Getters e Setters
@@ -25,11 +25,11 @@ public class Capa extends Produto {
 		this.celularCompativel = celularCompativel;
 	}
 	
-	public Double getPeso() {
+	public double getPeso() {
 		return peso;
 	}
 	
-	public void setPeso(Double peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 	

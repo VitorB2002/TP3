@@ -2,24 +2,24 @@ package tp3;
 
 public class Carregador extends Produto {
 	
-	private Double tamanhoCabo;
-	private Double potencia;
+	private double tamanhoCabo;
+	private double potencia;
 	
 	//Getters e Setters
 	
-	public Double getTamanhoCabo() {
+	public double getTamanhoCabo() {
 		return tamanhoCabo;
 	}
 	
-	public void setTamanhoCabo(Double tamanhoCabo) {
+	public void setTamanhoCabo(double tamanhoCabo) {
 		this.tamanhoCabo = tamanhoCabo;
 	}
 	
-	public Double getPotencia() {
+	public double getPotencia() {
 		return potencia;
 	}
 	
-	public void setPotencia(Double potencia) {
+	public void setPotencia(double potencia) {
 		this.potencia = potencia;
 	}
 	

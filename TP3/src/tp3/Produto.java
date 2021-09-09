@@ -4,7 +4,7 @@ public abstract class Produto {
 	
 	private String modelo;
 	private String descricao;
-	private Double valor;
+	private double valor;
 	private String marca;
 	
 	//Getters e Setters
@@ -26,11 +26,11 @@ public abstract class Produto {
 		this.descricao = descricao;
 	}
 	
-	public Double getValor() {
+	public double getValor() {
 		return valor;
 	}
 	
-	public void setValor(Double valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 	

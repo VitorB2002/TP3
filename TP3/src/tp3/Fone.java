@@ -2,7 +2,7 @@ package tp3;
 
 public class Fone extends Produto {
 	
-	private Double peso;
+	private double peso;
 	private String tipoConexao;
 	private boolean filtroRuido;
 	private String cor;
@@ -10,11 +10,11 @@ public class Fone extends Produto {
 	
 	//Getters e Setters
 	
-	public Double getPeso() {
+	public double getPeso() {
 		return peso;
 	}
 	
-	public void setPeso(Double peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 	
