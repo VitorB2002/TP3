@@ -3,7 +3,7 @@ package tp3;
 public abstract class Produto {
 	
 	private String modelo;
-	private String descrição;
+	private String descricao;
 	private Double valor;
 	private String marca;
 	
@@ -18,12 +18,12 @@ public abstract class Produto {
 	}
 	
 	
-	public String getDescrição() {
-		return descrição;
+	public String getDescricao() {
+		return descricao;
 	}
 	
-	public void setDescrição(String descrição) {
-		this.descrição = descrição;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	
 	public Double getValor() {
