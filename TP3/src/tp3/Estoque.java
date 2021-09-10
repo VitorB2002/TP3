@@ -8,11 +8,14 @@ public class Estoque {
 	private ArrayList<Carregador> carregadores = new ArrayList<>();
 	private ArrayList<Pelicula> peliculas = new ArrayList<>();
 	private ArrayList<Fone> fones = new ArrayList<>();
+	private ArrayList<Venda> vendas = new ArrayList<>();
+
 	private int qtdCarregador = 0;
 	private int qtdPelicula = 0;
 	private int qtdCapa = 0;
 	private int qtdFone = 0;
-	
+	private int qtdVenda = 0;
+
 	public Estoque() {
 		
 	}
@@ -26,6 +29,14 @@ public class Estoque {
 		saida += "\nFones registrados: " + qtdFone;
 		saida += "\nTotal de produtos: " + qtdProduto;
 		saida += "\nVendas realizadas: " + vendas;
+		System.out.println(saida);
+	}
+	
+	public void gerarHistorico(int qtdVenda, Venda venda) {
+		String saida;
+		saida = "\nComprador: " + venda.getCliente().getNome();
+		saida += "\nModelo comprado: " + venda.getProd().getModelo();
+		saida += "\nValor: " + venda.getProd().getValor() + " R$";
 		System.out.println(saida);
 	}
 	
@@ -62,6 +73,14 @@ public class Estoque {
 	public void setFones(Fone fone) {
 		fones.add(fone);
 	}
+	
+	public ArrayList<Venda> getVendas() {
+		return vendas;
+	}
+
+	public void setVendas(Venda venda) {
+		vendas.add(venda);
+	}
 
 	public int getQtdCarregador() {
 		return qtdCarregador;
@@ -95,6 +114,12 @@ public class Estoque {
 		this.qtdFone = qtdFone;
 	}
 	
-	
+	public int getQtdVenda() {
+		return qtdVenda;
+	}
+
+	public void setQtdVenda(int qtdVenda) {
+		this.qtdVenda = qtdVenda;
+	}
 	
 }

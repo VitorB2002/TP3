@@ -3,12 +3,10 @@ package tp3;
 public class Venda {
 	private Cliente cliente;
 	private Produto prod;
-	private int quantidade;
 	
-	public Venda(Cliente cliente, Produto prod, int quantidade) {
+	public Venda(Cliente cliente, Produto prod) {
 		this.cliente = cliente;
 		this.prod = prod;
-		this.quantidade = quantidade;
 	}
 	
 	//Getters e Setters
@@ -27,14 +25,6 @@ public class Venda {
 
 	public void setProd(Produto prod) {
 		this.prod = prod;
-	}
-
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
 	}
 
 }

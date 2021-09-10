@@ -6,11 +6,10 @@ public class Menu {
 	static Estoque estoque;
 	public static void main(String[] args) {
 		
-		int qtdProduto = 0, qtdCarregador = 0, qtdPelicula = 0, qtdCapa = 0, qtdFone = 0;
-		
+		int qtdCarregador = 0, qtdPelicula = 0, qtdCapa = 0, qtdFone = 0;
+		int qtdVenda = 0;
 		ArrayList<Cliente> listaCliente = new ArrayList<>();
-		ArrayList<Venda> vendas = new ArrayList<>();
-		
+		Estoque estoque = new Estoque();
 		Estoque estoqueCapas = new Estoque();
 		Estoque estoqueCarregadores = new Estoque();
 		Estoque estoquePeliculas = new Estoque();
@@ -25,7 +24,16 @@ public class Menu {
 		qtdCapa++;
 		Fone fon = new Fone("Headset", "Fone de qualidade", 50.0, "TWS", 0.500, "bluetooth", true, "Vermelho", "Silicone");
 		qtdFone++;
+		
+		//Criando cliente
 		Cliente cliente = new Cliente("Cleiton", "0549258234921", "Vila Mimosa", "cleiton@gmail2000.com", "61992341041");
+		
+		//Criando venda
+		Venda venda1 = new Venda(cliente, cap);
+		qtdVenda++;
+		//Registrando venda no estoque
+		estoqueCapas.setVendas(venda1);
+		estoqueCapas.setQtdVenda(qtdVenda);
 		
 		listaCliente.add(cliente);
 		
@@ -43,8 +51,6 @@ public class Menu {
 		estoqueFones.setFones(fon);
 		estoqueFones.setQtdFone(qtdFone);
 		
-		qtdProduto = qtdCapa + qtdCarregador + qtdPelicula + qtdFone;
-		
 		System.out.println(estoqueCapas.getCapas().get(0).toString());
 		System.out.println("\n");
 		System.out.println(estoqueCarregadores.getCarregadores().get(0).toString());
@@ -54,8 +60,10 @@ public class Menu {
 		System.out.println(estoqueFones.getFones().get(0).toString());
 		
 		//Teste do metodo relatorio
-		estoque.relatorioProdutos(qtdCarregador, qtdPelicula, qtdCapa, qtdFone, qtdFone);
+		estoque.relatorioProdutos(estoqueCarregadores.getQtdCarregador(), estoquePeliculas.getQtdPelicula(), estoqueCapas.getQtdCapa(), estoqueFones.getQtdFone(), estoqueCapas.getQtdVenda());
 		
+		//Teste geração de histórico
+		estoque.gerarHistorico(qtdVenda, venda1);
 	}
 
 }
