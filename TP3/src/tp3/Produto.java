@@ -2,10 +2,10 @@ package tp3;
 
 public abstract class Produto {
 	
-	private String modelo;
-	private String descricao;
-	private double valor;
-	private String marca;
+	protected String modelo;
+	protected String descricao;
+	protected double valor;
+	protected String marca;
 	
 	//Getters e Setters
 	

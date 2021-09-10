@@ -4,9 +4,19 @@ public class Cliente {
 	
 	private String nome;
 	private String cpf;
-	private String endereço;
+	private String endereco;
 	private String email;
 	private String telefone;
+	
+	//Constructor
+	
+	public Cliente(String nome, String cpf, String endereco, String email, String telefone) {
+		this.nome = nome;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.email = email;
+		this.telefone = telefone;
+	}
 	
 	//Getters e Setters
 	
@@ -26,12 +36,12 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 	
-	public String getEndereço() {
-		return endereço;
+	public String getEndereco() {
+		return endereco;
 	}
 	
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 	
 	public String getEmail() {

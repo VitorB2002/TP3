@@ -7,6 +7,19 @@ public class Capa extends Produto {
 	private double peso;
 	private String cor;
 	
+	//Constructor
+	
+	public Capa(String modelo, String descricao, double valor, String marca, String material, String celularCompativel, double peso, String cor) {
+		this.modelo = modelo;
+		this.descricao = descricao;
+		this.valor = valor;
+		this.marca = marca;
+		this.material = material;
+		this.celularCompativel = celularCompativel;
+		this.peso = peso;
+		this.cor = cor;
+	}
+	
 	//Getters e Setters
 	
 	public String getMaterial() {

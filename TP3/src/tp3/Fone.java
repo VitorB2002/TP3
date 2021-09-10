@@ -8,6 +8,19 @@ public class Fone extends Produto {
 	private String cor;
 	private String materialBorracha;
 	
+	//Constructor
+	public Fone(String modelo, String descricao, double valor, String marca, double peso, String tipoConexao, boolean filtroRuido, String cor, String materialBorracha) {
+		this.modelo = modelo;
+		this.descricao = descricao;
+		this.valor = valor;
+		this.marca = marca;
+		this.peso = peso;
+		this.tipoConexao = tipoConexao;
+		this.filtroRuido = filtroRuido;
+		this.cor = cor;
+		this.materialBorracha = materialBorracha;
+	}
+	
 	//Getters e Setters
 	
 	public double getPeso() {

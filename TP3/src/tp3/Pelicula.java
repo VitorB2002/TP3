@@ -6,6 +6,18 @@ public class Pelicula extends Produto{
 	private double espessura;
 	private String celularCompativel;
 	
+	//Constructor
+	
+	public Pelicula(String modelo, String descricao, double valor, String marca, String material, double espessura, String celularCompativel) {
+		this.modelo = modelo;
+		this.descricao = descricao;
+		this.valor = valor;
+		this.marca = marca;
+		this.material = material;
+		this.espessura = espessura;
+		this.celularCompativel = celularCompativel;
+	}
+	
 	//Getters e Setters
 	
 	public String getMaterial() {
