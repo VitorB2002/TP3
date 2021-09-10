@@ -5,6 +5,13 @@ public class Venda {
 	private Produto prod;
 	private int quantidade;
 	
+	public Venda(Cliente cliente, Produto prod, int quantidade) {
+		this.cliente = cliente;
+		this.prod = prod;
+		this.quantidade = quantidade;
+	}
+	
+	//Getters e Setters
 	
 	public Cliente getCliente() {
 		return cliente;
@@ -30,11 +37,4 @@ public class Venda {
 		this.quantidade = quantidade;
 	}
 
-	public Venda(Cliente cliente, Produto prod, int quantidade) {
-		this.cliente = cliente;
-		this.prod = prod;
-		this.quantidade = quantidade;
-	}
-	
-	
 }

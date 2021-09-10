@@ -8,14 +8,25 @@ public class Estoque {
 	private ArrayList<Carregador> carregadores = new ArrayList<>();
 	private ArrayList<Pelicula> peliculas = new ArrayList<>();
 	private ArrayList<Fone> fones = new ArrayList<>();
-	private int qtdProduto = 0;
+	private int qtdCarregador = 0;
+	private int qtdPelicula = 0;
+	private int qtdCapa = 0;
+	private int qtdFone = 0;
 	
 	public Estoque() {
 		
 	}
 	
-	public void relatorioProdutos(int qtdProduto) {
-		
+	public void relatorioProdutos(int qtdCarregador, int qtdPelicula, int qtdCapa, int qtdFone, int vendas) {
+		String saida;
+		int qtdProduto = qtdCarregador + qtdPelicula + qtdCapa + qtdFone;
+		saida = "\nCarregadores registrados: " + qtdCarregador;
+		saida += "\nPeliculas registradas: " + qtdPelicula;
+		saida += "\nCapas registradas: " + qtdCapa;
+		saida += "\nFones registrados: " + qtdFone;
+		saida += "\nTotal de produtos: " + qtdProduto;
+		saida += "\nVendas realizadas: " + vendas;
+		System.out.println(saida);
 	}
 	
 	//Getters e Setters
@@ -51,13 +62,39 @@ public class Estoque {
 	public void setFones(Fone fone) {
 		fones.add(fone);
 	}
-	
-	public int getQtdProduto() {
-		return qtdProduto;
+
+	public int getQtdCarregador() {
+		return qtdCarregador;
+	}
+
+	public void setQtdCarregador(int qtdCarregador) {
+		this.qtdCarregador = qtdCarregador;
+	}
+
+	public int getQtdPelicula() {
+		return qtdPelicula;
+	}
+
+	public void setQtdPelicula(int qtdPelicula) {
+		this.qtdPelicula = qtdPelicula;
+	}
+
+	public int getQtdCapa() {
+		return qtdCapa;
+	}
+
+	public void setQtdCapa(int qtdCapa) {
+		this.qtdCapa = qtdCapa;
+	}
+
+	public int getQtdFone() {
+		return qtdFone;
+	}
+
+	public void setQtdFone(int qtdFone) {
+		this.qtdFone = qtdFone;
 	}
 	
-	public void setQtdProduto(int qtdProduto) {
-		this.qtdProduto = qtdProduto;
-	}
+	
 	
 }

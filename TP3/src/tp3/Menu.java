@@ -3,32 +3,47 @@ package tp3;
 import java.util.ArrayList;
 
 public class Menu {
-	
+	static Estoque estoque;
 	public static void main(String[] args) {
 		
 		int qtdProduto = 0, qtdCarregador = 0, qtdPelicula = 0, qtdCapa = 0, qtdFone = 0;
+		
+		ArrayList<Cliente> listaCliente = new ArrayList<>();
+		ArrayList<Venda> vendas = new ArrayList<>();
 		
 		Estoque estoqueCapas = new Estoque();
 		Estoque estoqueCarregadores = new Estoque();
 		Estoque estoquePeliculas = new Estoque();
 		Estoque estoqueFones = new Estoque();
 		
-		Venda v;
+		//Criando objetos filhos
 		Carregador car = new Carregador("Usb - c", "Carregador voltado para celulares com plug c", 15.5, "Inova", 100, 2.5);
+		qtdCarregador++;
 		Pelicula peli = new Pelicula("3D", "Película protetora anti-impacto", 30.0, "nanoshield", "Vidro", 0.5, "Samsung A8");
+		qtdPelicula++;
 		Capa cap = new Capa("Anti-Impacto", "Capa anti-impacto para evitar acidentes", 20, "Incase", "Silicone2", "J7 e J5", 1.98, "Azul");
-		Capa cap2 = new Capa("Anti-Impacto", "Capa anti-impacto para evitar acidentes", 20, "Incase", "Silicone", "J7 e J5", 1.98, "Azul");
+		qtdCapa++;
 		Fone fon = new Fone("Headset", "Fone de qualidade", 50.0, "TWS", 0.500, "bluetooth", true, "Vermelho", "Silicone");
-		Cliente cliente1 = new Cliente("Cleiton", "0549258234921", "Vila Mimosa", "cleiton@gmail2000.com", "61992341041");
+		qtdFone++;
+		Cliente cliente = new Cliente("Cleiton", "0549258234921", "Vila Mimosa", "cleiton@gmail2000.com", "61992341041");
+		
+		listaCliente.add(cliente);
+		
+		//Registrando os produtos no estoque
 		
 		estoqueCapas.setCapas(cap);
-		qtdCapa++;
-		estoqueCapas.setCapas(cap2);
-		qtdCapa++;
+		estoqueCapas.setQtdCapa(qtdCapa);
+		
 		estoqueCarregadores.setCarregadores(car);
+		estoqueCarregadores.setQtdCarregador(qtdCarregador);
 		
 		estoquePeliculas.setPeliculas(peli);
+		estoquePeliculas.setQtdPelicula(qtdPelicula);
+		
 		estoqueFones.setFones(fon);
+		estoqueFones.setQtdFone(qtdFone);
+		
+		qtdProduto = qtdCapa + qtdCarregador + qtdPelicula + qtdFone;
 		
 		System.out.println(estoqueCapas.getCapas().get(0).toString());
 		System.out.println("\n");
@@ -37,6 +52,9 @@ public class Menu {
 		System.out.println(estoquePeliculas.getPeliculas().get(0).toString());
 		System.out.println("\n");
 		System.out.println(estoqueFones.getFones().get(0).toString());
+		
+		//Teste do metodo relatorio
+		estoque.relatorioProdutos(qtdCarregador, qtdPelicula, qtdCapa, qtdFone, qtdFone);
 		
 	}
 
