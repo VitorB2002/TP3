@@ -21,6 +21,19 @@ public class Fone extends Produto {
 		this.materialBorracha = materialBorracha;
 	}
 	
+	public String toString() {
+		String saida;
+		saida = "Modelo: " + this.modelo;
+		saida += "\nDescrição: " + this.descricao;
+		saida += "\nValor: " + this.valor + " R$";
+		saida += "\nMarca: " + this.marca;
+		saida += "\nPeso: " + this.peso;
+		saida += "\nFiltra Ruídos: " + this.filtroRuido;
+		saida += "\nCor: " + this.cor;
+		saida += "\nMaterial da Borracha: " + this.materialBorracha;
+		return saida;
+	}
+	
 	//Getters e Setters
 	
 	public double getPeso() {

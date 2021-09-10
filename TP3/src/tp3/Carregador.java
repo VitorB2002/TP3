@@ -16,6 +16,17 @@ public class Carregador extends Produto {
 		this.potencia = potencia;
 	}
 	
+	public String toString(){
+		String saida;
+		saida = "Modelo: " + this.modelo;
+		saida += "\nDescrição: " + this.descricao;
+		saida += "\nValor: " + this.valor + " R$";
+		saida += "\nMarca: " + this.marca;
+		saida += "\nComprimento do Cabo: " + this.tamanhoCabo + " cm";
+		saida += "\nPotencia: " +this.potencia + " Watts";
+		return saida;
+	}
+	
 	//Getters e Setters
 	
 	public double getTamanhoCabo() {

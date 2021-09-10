@@ -18,6 +18,18 @@ public class Pelicula extends Produto{
 		this.celularCompativel = celularCompativel;
 	}
 	
+	public String toString(){
+		String saida;
+		saida = "Modelo: " + this.modelo;
+		saida += "\nDescrição: " + this.descricao;
+		saida += "\nValor: " + this.valor + " R$";
+		saida += "\nMarca: " + this.marca;
+		saida += "\nMaterial: " + this.material;
+		saida += "\nEspessura: " + this.espessura;
+		saida += "\nCelular Compativel: " + this.celularCompativel;
+		return saida;
+	}
+	
 	//Getters e Setters
 	
 	public String getMaterial() {

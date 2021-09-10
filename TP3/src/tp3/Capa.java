@@ -20,6 +20,18 @@ public class Capa extends Produto {
 		this.cor = cor;
 	}
 	
+	public String toString(){
+		String saida;
+		saida = "Modelo: " + this.modelo;
+		saida += "\nDescrição: " + this.descricao;
+		saida += "\nValor: " + this.valor + " R$";
+		saida += "\nMarca: " + this.marca;
+		saida += "\nMaterial: " + this.material;
+		saida += "\nCelular Compativel: " + this.celularCompativel;
+		saida += "\nPeso: " + this.peso + "g";
+		return saida;
+	}
+	
 	//Getters e Setters
 	
 	public String getMaterial() {
